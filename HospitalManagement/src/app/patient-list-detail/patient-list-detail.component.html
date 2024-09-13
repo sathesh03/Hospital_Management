@@ -1,0 +1,70 @@
+<div class="container-fluid mb-2">
+    <h3>Patient Biodata :</h3>
+    <mat-card appearance="outlined" class="mb-2">
+        <mat-card-content>
+            <div class="row">
+                <div class="col-sm-6">
+                    <mat-label>Date : <label >{{Date}}</label></mat-label><br>
+                    <mat-label>Name : <label >{{name}}</label></mat-label><br>
+                    <mat-label>Gender : <label >{{gender}}</label></mat-label><br>
+                    <mat-label>Phone No : <label >{{phoneNo}}</label></mat-label><br>
+                    <mat-label>Emial : <label >{{email}}</label></mat-label><br>
+                    <mat-label>Age : <label >{{age}}</label></mat-label><br>
+                    <mat-label>Marital status : <label >{{maritalStatus}}</label></mat-label>
+                </div>
+                <div class="col-sm-6">
+                    <mat-label>Address Line 1 : <label >{{address}}</label></mat-label><br>
+                    <mat-label>Address Line 2 : <label >{{address2}}</label></mat-label><br>
+                    <mat-label>City : <label >{{city}}</label></mat-label><br>
+                    <mat-label>State : <label >{{state}}</label></mat-label><br>
+                    <mat-label>Postal/Zip Code : <label >{{pincode}}</label></mat-label><br>
+                    <mat-label>Country : <label >{{country}}</label></mat-label>
+                </div>
+            </div>
+            
+        </mat-card-content>
+      </mat-card>
+
+      <mat-card appearance="outlined" class="mb-2">
+        <mat-card-header>
+            <h6>Health History</h6>
+        </mat-card-header>
+        <mat-card-content>
+            <mat-label>Reason for Registration : <label >{{reasForReg}}</label></mat-label><br>
+            <mat-label>Aditional Notes : <label >{{addNotes}}</label></mat-label><br>
+            <mat-label>Taking any Medications, Currently? : <label >{{isMedications}}</label></mat-label>
+        </mat-card-content>
+      </mat-card>
+
+      <div class="row">
+        <div class="col-md-6">
+            
+      <mat-card appearance="outlined" class="mb-2">
+        <mat-card-header>
+            <h6>Emergency Contact</h6>
+        </mat-card-header>
+        <mat-card-content>
+            <mat-label>Name : <label >{{emergContPer}}</label></mat-label><br>
+            <mat-label>relationship : <label >{{relationship}}</label></mat-label><br>
+            <mat-label>Phone No : <label >{{contactNo}}</label></mat-label>
+        </mat-card-content>
+      </mat-card>
+    </div>
+      <div class="col-md-6">
+      <mat-card appearance="outlined" class="mb-2">
+        <mat-card-header>
+            <h6>Insurance Information</h6>
+        </mat-card-header>
+        <mat-card-content>
+            <mat-label>Company Name : <label >{{insComp}}</label></mat-label><br>
+            <mat-label>Id : <label >{{insId}}</label></mat-label><br>
+            <mat-label>Policy Holder Name : <label >{{polHolderName}}</label></mat-label>
+        </mat-card-content>
+      </mat-card>
+      
+      
+    </div>
+</div>
+
+      <button mat-raised-button color="warn" routerLink="" class="float-end reg">Close</button>
+</div>

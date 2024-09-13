@@ -1,0 +1,241 @@
+<div class="container-fluid mb-2">
+    <h3>Registration Form</h3>
+        <form [formGroup]="register" (ngSubmit)="onSubmit()" class="mb-2">
+
+        <mat-card appearance="outlined" class="mb-2">
+            <mat-card-content>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <mat-form-field class="example-full-width">
+                            <mat-label>Choose a date </mat-label>
+                            <input matInput [matDatepicker]="picker" formControlName="date">
+                            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                            <mat-datepicker #picker></mat-datepicker>
+                            <mat-error *ngIf="register.controls['date'].hasError('required') && register.controls['date'].touched">
+                                Field Must Be Select "Date"</mat-error>
+                          </mat-form-field>                          
+                    </div>
+                    <div class="col-sm-4">
+                        <mat-form-field class="example-full-width">
+                            <mat-label>Name </mat-label>
+                            <input matInput type="text" placeholder="Ex. Sathesh G" formControlName="name">
+                            <mat-error *ngIf="register.controls['name'].hasError('required') && register.controls['name'].touched">
+                                Field Must Be Enter "Name"</mat-error>
+                          </mat-form-field>
+                    </div>
+                    <div class="col-sm-4">
+                        <mat-form-field class="example-full-width">
+                            <mat-label>Gender </mat-label>
+                            <mat-select placeholder="Ex.Male" formControlName="gender">
+                              <mat-option value="Male">Male</mat-option>
+                              <mat-option value="Female">Female</mat-option>
+                              <mat-option value="N/A">N/A</mat-option>
+                            </mat-select>
+                            <mat-error *ngIf="register.controls['gender'].hasError('required') && register.controls['gender'].touched">
+                                Field Must Be Select "Gender"</mat-error>
+                          </mat-form-field>  
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6 col">
+                        <mat-form-field class="example-full-width">
+                            <mat-label>Address Line 1</mat-label>
+                            <input matInput type="text" placeholder="Address Line 1" formControlName="address">
+                            <mat-error *ngIf="register.controls['address'].hasError('required') && register.controls['address'].touched">
+                                Field Must Be Enter "Address"</mat-error>
+                          </mat-form-field>
+                    </div>
+                    <div class="col-sm-6 col-md-">
+                        <mat-form-field class="example-full-width">
+                            <mat-label>Address Line 2 </mat-label>
+                            <input matInput type="text" placeholder="Address Line 2" formControlName="address2">
+                            <mat-error *ngIf="register.controls['address2'].hasError('required') && register.controls['address2'].touched">
+                                Field Must Be Enter "Address"</mat-error>
+                          </mat-form-field>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-6 col-md-3">
+                        <mat-form-field class="example-full-width">
+                            <mat-label>City </mat-label>
+                            <input matInput type="text" placeholder="Ex.Coimbatore" formControlName="city">
+                            <mat-error *ngIf="register.controls['city'].hasError('required') && register.controls['city'].touched">
+                                Field Must Be Enter "City"</mat-error>
+                          </mat-form-field>
+                    </div>
+                    <div class="col-sm-6 col-md-3">
+                        <mat-form-field class="example-full-width">
+                            <mat-label>State </mat-label>
+                            <input matInput type="text" placeholder="Ex.TamilNadu" formControlName="state">
+                            <mat-error *ngIf="register.controls['state'].hasError('required') && register.controls['state'].touched">
+                                Field Must Be Enter "State"</mat-error>
+                          </mat-form-field>
+                    </div>
+                    <div class="col-sm-6 col-md-3">
+                        <mat-form-field class="example-full-width">
+                            <mat-label>Postal/Zip Code </mat-label>
+                            <input matInput type="number" onKeyPress="if(this.value.length ==6 ) return false" placeholder="Ex.000000" formControlName="pincode">
+                            <mat-error *ngIf="register.controls['pincode'].hasError('required') && register.controls['pincode'].touched">
+                                Field Must Be Enter "Postal/Zip Code"</mat-error>
+                          </mat-form-field>
+                    </div>
+                    <div class="col-sm-6 col-md-3">
+                        <mat-form-field class="example-full-width">
+                            <mat-label>Country </mat-label>
+                            <input matInput type="text" placeholder="Ex.India" formControlName="country">
+                            <mat-error *ngIf="register.controls['country'].hasError('required') && register.controls['country'].touched">
+                                Field Must Be Enter "Country"</mat-error>
+                          </mat-form-field>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-6 col-md-3">
+                        <mat-form-field class="example-full-width">
+                            <mat-label>Phone No </mat-label>
+                            <input matInput type="number" onKeyPress="if(this.value.length ==10 ) return false" placeholder="Ex.1234567890" formControlName="phoneNo">
+                            <mat-error *ngIf="register.controls['phoneNo'].hasError('required') && register.controls['phoneNo'].touched">
+                                Field Must Be Enter "Phone No"</mat-error>
+                          </mat-form-field>
+                    </div>
+                    <div class="col-sm-6 col-md-3">
+                        <mat-form-field class="example-full-width">
+                            <mat-label>Email </mat-label>
+                            <input matInput type="text" placeholder="Ex.abcd@gmail.com" formControlName="email">
+                            <mat-error *ngIf="register.controls['email'].hasError('required') && register.controls['email'].touched">
+                                Field Must Be Enter "Email"</mat-error>
+                          </mat-form-field>
+                    </div>
+                    <div class="col-sm-6 col-md-3">
+                        <mat-form-field class="example-full-width">
+                            <mat-label>Age </mat-label>
+                            <input matInput type="number" onKeyPress="if(this.value.length ==3 ) return false" placeholder="Ex.18" formControlName="age">
+                            <mat-error *ngIf="register.controls['age'].hasError('required') && register.controls['age'].touched">
+                                Field Must Be Enter "Age"</mat-error>
+                          </mat-form-field>
+                    </div>
+                    <div class="col-sm-6 col-md-3">
+                        <mat-form-field class="example-full-width">
+                            <mat-label>Marital Status </mat-label>
+                            <mat-select placeholder="Ex.Single" formControlName="maritalStatus">
+                              <mat-option value="Single">Single</mat-option>
+                              <mat-option value="Married">Married</mat-option>
+                              <mat-option value="Divorced">Divorced</mat-option>
+                              <mat-option value="Legally Seperated">Legally Seperated</mat-option>
+                              <mat-option value="Widow">Widow</mat-option>
+                            </mat-select>
+                            <mat-error *ngIf="register.controls['maritalStatus'].hasError('required') && register.controls['maritalStatus'].touched">
+                                Field Must Be Select "Marital Status"</mat-error>
+                          </mat-form-field>                          
+                    </div>
+                </div>
+            </mat-card-content>
+          </mat-card>
+          
+          <mat-card appearance="outlined" class="mb-2">
+            <mat-card-header>
+                <h5>Emergency Contact</h5>
+            </mat-card-header>
+            <mat-card-content>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <mat-form-field class="example-full-width">
+                            <mat-label>Name </mat-label>
+                            <input matInput type="text" placeholder="Ex.Lokesh" formControlName="emergContPer">
+                            <mat-error *ngIf="register.controls['emergContPer'].hasError('required') && register.controls['emergContPer'].touched">
+                                Field Must Be Enter "Name"</mat-error>
+                          </mat-form-field>
+                    </div>
+                    <div class="col-sm-4">
+                        <mat-form-field class="example-full-width">
+                            <mat-label>Relationship </mat-label>
+                            <input matInput type="text" placeholder="Ex.Friend" formControlName="relationship">
+                            <mat-error *ngIf="register.controls['relationship'].hasError('required') && register.controls['relationship'].touched">
+                                Field Must Be Enter "Relationship"</mat-error>
+                          </mat-form-field>
+                    </div>
+                    <div class="col-sm-4">
+                        <mat-form-field class="example-full-width">
+                            <mat-label>Phone No </mat-label>
+                            <input matInput type="number" onKeyPress="if(this.value.length ==10 ) return false" placeholder="Ex.1234567890" formControlName="contactNo">
+                            <mat-error *ngIf="register.controls['contactNo'].hasError('required') && register.controls['contactNo'].touched">
+                                Field Must Be Enter "Phone No"</mat-error>
+                          </mat-form-field>
+                    </div>
+                </div>
+            </mat-card-content>
+          </mat-card>
+          
+          <mat-card appearance="outlined" class="mb-2">
+            <mat-card-header>
+                <h5>Health History</h5>
+            </mat-card-header>
+            <mat-card-content>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <mat-form-field class="example-full-width">
+                            <mat-label>Reason for Registration </mat-label>                            
+                            <textarea matInput placeholder="Ex. Due To Heavy Fever" formControlName="reasForReg"></textarea>
+                            <mat-error *ngIf="register.controls['reasForReg'].hasError('required') && register.controls['reasForReg'].touched">
+                                Field Must Be Enter "Reason"</mat-error>
+                          </mat-form-field>
+                    </div>
+                    <div class="col-sm-6">
+                        <mat-form-field class="example-full-width">
+                            <mat-label>Aditional Notes </mat-label>
+                            <textarea matInput placeholder="Ex. Detials..." formControlName="addNotes"></textarea>
+                          </mat-form-field>
+                    </div>
+                    <div class="col">
+                        <section class="example-section">
+                            <mat-label class="example-margin">Taking any Medications, Currently? </mat-label>
+                            <mat-radio-group formControlName="isMedications">
+                              <mat-radio-button value="Yes">Yes</mat-radio-button> 
+                              <mat-radio-button value="No">No</mat-radio-button>
+                            </mat-radio-group>
+                            <mat-error *ngIf="register.controls['isMedications'].hasError('required') && register.controls['isMedications'].touched">
+                                Field Must Be Select "Is Medications"</mat-error>
+                          </section>
+                    </div>
+                </div>
+            </mat-card-content>
+          </mat-card>
+
+          <mat-card appearance="outlined" class="mb-2">
+            <mat-card-header>
+                <h5>Insurance Information :</h5>
+            </mat-card-header>
+            <mat-card-content>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <mat-form-field class="example-full-width">
+                            <mat-label>Company Name </mat-label>
+                            <input matInput type="text" placeholder="Ex.LIC" formControlName="insComp">
+                          </mat-form-field>
+                    </div>
+                    <div class="col-sm-4">
+                        <mat-form-field class="example-full-width">
+                            <mat-label>Id </mat-label>
+                            <input matInput type="text" placeholder="Ex.XXXXXXXXXX" formControlName="insId">
+                          </mat-form-field>
+                    </div>
+                    <div class="col-sm-4">
+                        <mat-form-field class="example-full-width">
+                            <mat-label>Policy Holder Name </mat-label>
+                            <input matInput type="text" placeholder="Ex.Sathesh G" formControlName="polHolderName">
+                          </mat-form-field>
+                    </div>
+                </div>
+            </mat-card-content>
+          </mat-card>
+
+          <div class="row">
+            <div class="col">
+                <button mat-raised-button color="warn" routerLink="" style="background-color: red;" class="float-end reg">Close</button>
+                <button mat-raised-button type="submit" class="float-end reg">Register</button>
+            </div>
+          </div>
+
+    </form>
+</div>

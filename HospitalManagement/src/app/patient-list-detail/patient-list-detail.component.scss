@@ -1,0 +1,27 @@
+*,h6,h3{
+    font-family: 'Times New Roman', Times, serif ;
+}
+
+h3{
+    font-size: x-large;
+}
+
+h6,h3{
+    color: #780000;
+}
+mat-label{
+    color: #023e8a;
+    label{
+        color: black;
+    }
+}
+
+button{
+    border-radius: 5px;
+    font-weight: bold;
+    padding: 5px 35px;
+}
+
+.container-fluid{
+    margin-top: 80px;
+  }

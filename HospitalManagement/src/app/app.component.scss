@@ -1,0 +1,31 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+img{
+  width: 80px;
+}
+
+h1{
+  font-family: 'Times New Roman', Times, serif !important;
+  font-weight: bold !important;
+  font-size: xx-large !important;
+  color: #2c7da0;
+  padding-left: 1%;
+}
+
+button{
+  margin-right: 10px;
+  font-family: 'Times New Roman', Times, serif !important;
+  font-weight: bold !important;
+}
+
+.mat-elevation-z8{
+  position: fixed;
+  top: 0;
+  z-index: 99;
+}
+
+mat-nav-list{
+  margin-top: 70px;
+}

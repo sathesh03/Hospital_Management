@@ -1,0 +1,43 @@
+*,section{
+    font-family: 'Times New Roman', Times, serif !important;
+}
+
+h3{
+    font-weight: bold !important;
+    text-align: center;
+    color: #780000;
+}
+
+h5{
+    color: #780000;   
+}
+.example-full-width{
+    width: 100%;
+}
+
+.reg{
+    border-radius: 5px;
+    font-size: large;
+    padding: 5px 30px;
+    background-color: #03045e;
+    color: white;
+    margin-right: 1%;
+}
+
+form{
+    box-shadow: 0 1px 2px 1px #b1b1b9;
+    -webkit-box-shadow: 0 2px 1px 1px #bbb;
+    padding: 5px;
+}
+
+mat-label{
+    color: #023e8a;
+}
+
+mat-error{
+    font-weight: bold;
+}
+
+.container-fluid{
+    margin-top: 70px;
+  }
